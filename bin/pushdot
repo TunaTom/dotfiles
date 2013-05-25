@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DOTFILES=${DOTFILES:-~/.dotfiles}
+
+cd $DOTFILES
+git add .
+git commit -m "changes from `hostname`"
+git pull --rebase && git push
