@@ -1,6 +1,6 @@
+export IDE=/data/data/com.spartacusrex.spartacuside/files
+export DOTFILES=$IDE/dotfiles
 
+. ${DOTFILES}/bin/handypath
 
-PATH=$PATH:/data/data/com.spartacusrex.spartacuside/files/system/bin
-
-export DOTFILES=/data/data/com.spartacusrex.spartacuside/files/dotfiles
 . ${DOTFILES}/bin/pushdot

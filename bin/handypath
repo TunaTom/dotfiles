@@ -1,0 +1,3 @@
+export PATH=$PATH:$IDE/system/bin:$IDE/dotfiles/bin
+export GIT_SSH=$IDE/sssh
+

@@ -1,7 +1,7 @@
 export IDE=/data/data/com.spartacusrex.spartacuside/files
-export PATH=$PATH:$IDE/system/bin:$IDE/dotfiles/bin
-export GIT_SSH=$IDE/sssh
 export DOTFILES=$IDE/dotfiles
+
+. $DOTFILES/bin/handypath
 
 cd $DOTFILES
 git pull --rebase
