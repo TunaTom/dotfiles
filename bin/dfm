@@ -141,9 +141,6 @@ sub run_dfm {
         # import files
         import_files( $home . '/' . $repo_dir, $home, \@argv );
     }
-    elsif ($command eq 'pu' || $command eq 'pushToServer' ) {
-        push_To_Server( \%opts );
-    }
     else {
 
         # assume it's a git command and call accordingly
@@ -213,15 +210,6 @@ sub fetch_updates {
     check_remote_branch($current_branch);
 
     print get_changes("$current_branch..$current_branch\@{u}"), "\n";
-}
-
-sub push_To_Server {
-  my $message = shift;
-  
-  chdir( $home . '/' . $repo_dir );
-  
-  system("git commit -am '$message'");
-  system("git push");
 }
 
 sub merge_and_install {
