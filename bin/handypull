@@ -4,5 +4,5 @@ export USER=`stat -c %u $DOTFILES`
 
 . $DOTFILES/bin/handypath
 cd $DOTFILES
-su -c git pull --rebase -- $USER
+su -c "git pull --rebase" $USER
 

@@ -3,6 +3,6 @@ export DOTFILES=$IDE/dotfiles
 export USER=`stat -c %u $DOTFILES`
 
 . ${DOTFILES}/bin/handypath
-su -c ${DOTFILES}/bin/pushdot -- $USER
+su -c "${DOTFILES}/bin/pushdot" $USER
 
 
