@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PATH=$PATH:/data/data/com./system/files/bin/
+
+cd /sdcard/data/.dotfiles
+git pull --rebase

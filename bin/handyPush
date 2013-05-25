@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PATH=$PATH:/data/data/com./system/files/bin/
+
+export DOTFILES=/sdcard/data/.dotfiles
+${DOTFILES}/bin/pushdot
