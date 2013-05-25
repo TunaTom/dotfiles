@@ -1,6 +1,5 @@
-#!/bin/bash
+PATH=$PATH:/data/data/com.spartacusrex.spartacuside/files/system/bin
+export DOTFILES=/sdcard/data/.dotfiles
 
-PATH=$PATH:/data/data/com./system/files/bin/
-
-cd /sdcard/data/.dotfiles
+cd $DOTFILES
 git pull --rebase
