@@ -1,7 +1,10 @@
 export IDE=/data/data/com.spartacusrex.spartacuside/files
 export DOTFILES=$IDE/dotfiles
+export USER=`stat -c %u $DOTFILES`
 
 . $DOTFILES/bin/handypath
 
 cd $DOTFILES
 git pull --rebase
+
+chown -R $USER $DOTFILES

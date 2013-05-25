@@ -1,6 +1,11 @@
 export IDE=/data/data/com.spartacusrex.spartacuside/files
 export DOTFILES=$IDE/dotfiles
+export USER=`stat -c %u $DOTFILES`
 
 . ${DOTFILES}/bin/handypath
 
+
 . ${DOTFILES}/bin/pushdot
+
+chown -R $USER $DOTFILES
+
