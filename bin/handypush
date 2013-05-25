@@ -3,4 +3,4 @@
 PATH=$PATH:/data/data/com.spartacusrex.spartacuside/files/system/bin
 
 export DOTFILES=/data/data/com.spartacusrex.spartacuside/files/dotfiles
-${DOTFILES}/bin/pushdot
+. ${DOTFILES}/bin/pushdot
