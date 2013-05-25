@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# the position of the vpn to connect to in the list of all vpns.
+# must only change if you have more than one vpns configured
+INDEX_OF_VPN=1
+
+function checkActivated() {
+    CONNECTION=$1
+    nmcli con status | grep -q $CONNECTION
+    ISUP=$?
+    return $ISUP
+}
+
+function activate() {
+    CONNECTION=$1
+    nmcli con up uuid $CONNECTION
+}
+
+function getFirstVpn() {
+    echo `nmcli con | grep vpn | head -$INDEX_OF_VPN | tail -1 | awk '{print $2}'`
+}
+
+function activateFirstVpnIfDown() {
+    FIRST_VPN=`getFirstVpn`
+    if ! checkActivated $FIRST_VPN; then 
+        activate $FIRST_VPN
+    fi
+}
+
+while true; do
+    activateFirstVpnIfDown
+    sleep 5;
+done
+

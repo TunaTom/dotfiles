@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DEVICE=`ls /dev/ttyUSB* | tail -1`
+echo "Flashing to $DEVICE"
+avrdude -patmega328p -carduino -P${DEVICE} -b57600 -D -Uflash:w:/home/vollerthun/Dokumente/grbl/grbl.hex 

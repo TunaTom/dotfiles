@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function startServer() {
+  kdesudo --  java -jar /home/vollerthun/bin/lib/DevNullSmtp.jar -console -s /tmp/devNullSmtp
+}
+
+mkdir -p /tmp/devNullSmtp
+startServer

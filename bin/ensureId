@@ -1,0 +1,18 @@
+#!/bin/bash 
+
+SSH_ASKPASS=/usr/bin/ksshaskpass
+
+function sshaskPass() {
+    $SSH_ASKPASS | ssh-add
+}
+
+function hasIdentity() {
+    ssh-add -l | grep ~/.ssh/id_dsa 2>&1 >/dev/null
+    return $?
+}
+
+function ensureId() {
+        hasIdentity || sshaskPass
+}
+
+ensureId
