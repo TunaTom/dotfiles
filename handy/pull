@@ -2,5 +2,8 @@
 export PATH=/opt/sbin:/opt/bin:/bin:/system/bin
 export HOME=/opt/home/user
 
+eval `ssh-agent`
+ssh-add
+
 cd ~/dotfiles
 git pull
