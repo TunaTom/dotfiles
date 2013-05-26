@@ -1,1 +1,6 @@
+#!/system/bin/sh
+export PATH=/opt/sbin:/opt/bin:/bin:/system/bin
+export HOME=/opt/home/user
 
+cd ~/dotfiles
+git pull
