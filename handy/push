@@ -1,6 +1,7 @@
 #!/system/bin/sh
 export PATH=/opt/sbin:/opt/bin:/bin:/system/bin
 export HOME=/opt/home/user
+export DOTFILES=~/dotfiles
 
 echo "Hello World"
 . ~/dotfiles/bin/pushdot
